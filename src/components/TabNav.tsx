@@ -12,7 +12,7 @@ export default function TabNav({ active, onChange, counts }: Props) {
     <nav style={{
       display: 'flex',
       gap: 0,
-      borderBottom: '1px solid #e2e8f0',
+      borderBottom: '1px solid rgba(255,255,255,0.1)',
       overflowX: 'auto',
       scrollbarWidth: 'none',
     }}>
@@ -23,13 +23,13 @@ export default function TabNav({ active, onChange, counts }: Props) {
             key={cat.id}
             onClick={() => onChange(cat.id)}
             style={{
-              padding: '12px 20px',
+              padding: '11px 18px',
               border: 'none',
-              borderBottom: isActive ? `2px solid ${cat.color}` : '2px solid transparent',
-              background: isActive ? `${cat.color}11` : 'transparent',
-              color: isActive ? cat.color : '#475569',
+              borderBottom: isActive ? `2px solid #ffffff` : '2px solid transparent',
+              background: isActive ? 'rgba(255,255,255,0.12)' : 'transparent',
+              color: isActive ? '#ffffff' : 'rgba(255,255,255,0.6)',
               fontWeight: isActive ? 700 : 400,
-              fontSize: 14,
+              fontSize: 13,
               cursor: 'pointer',
               whiteSpace: 'nowrap',
               transition: 'all 0.15s ease',
@@ -38,15 +38,15 @@ export default function TabNav({ active, onChange, counts }: Props) {
               gap: 6,
             }}
           >
-            <CategoryIcon id={cat.id} color={isActive ? cat.color : '#94a3b8'} />
+            <CategoryIcon id={cat.id} color={isActive ? '#ffffff' : 'rgba(255,255,255,0.5)'} />
             {cat.label}
             <span style={{
               padding: '1px 6px',
               borderRadius: 10,
               fontSize: 11,
-              background: isActive ? `${cat.color}22` : '#f1f5f9',
-              color: isActive ? cat.color : '#94a3b8',
-              border: `1px solid ${isActive ? `${cat.color}44` : '#e2e8f0'}`,
+              background: isActive ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)',
+              color: isActive ? '#ffffff' : 'rgba(255,255,255,0.5)',
+              border: `1px solid rgba(255,255,255,${isActive ? '0.3' : '0.1'})`,
               fontWeight: 600,
             }}>
               {counts[cat.id]}

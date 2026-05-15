@@ -3,7 +3,7 @@ import type { Anomaly } from '../types/ecg'
 export const arritmias: Anomaly[] = [
   {
     id: 'fa',
-    name: 'Fibrilacao Atrial (FA)',
+    name: 'Fibrilação Atrial (FA)',
     shortName: 'FA',
     category: 'arritmias',
     color: '#8b5cf6',
@@ -12,16 +12,16 @@ export const arritmias: Anomaly[] = [
     criteria: [
       { text: 'Ausencia de ondas P discerniveis (linha de base irregular)', important: true },
       { text: 'Intervalos RR totalmente irregulares', important: true },
-      { text: 'QRS estreito (exceto se aberrancia ou bloqueio de ramo)' },
-      { text: 'FC ventricular variavel: lenta (< 60), controlada (60-100) ou rapida (> 100 bpm)' },
+      { text: 'QRS estreito (exceto se aberrância ou bloqueio de ramo)' },
+      { text: 'FC ventricular variável: lenta (< 60), controlada (60-100) ou rápida (> 100 bpm)' },
     ],
     exceptions: [
       { text: 'FA com aberrancia pode simular TV -- critério: irregularidade do RR (FA) vs. regularidade (TV)' },
       { text: 'FA em WPW: condutor anomalo pode gerar QRS largo e irregular -- risco de FV', important: true },
     ],
     conductaTimeSensitive: [
-      'Inicio < 48h + instavel: cardioversao eletrica imediata',
-      'Inicio < 48h + estavel: cardioversao farmacologica ou eletrica',
+      'Inicio < 48h + instavel: cardioversão elétrica imediata',
+      'Inicio < 48h + estavel: cardioversão farmacológica ou eletrica',
       'Inicio > 48h ou desconhecido: anticoagulacao por 3 semanas ou ETE para excluir trombo antes de cardiovertir',
       'Controle de FC: betabloqueador, diltiazem, digoxina',
     ],
@@ -42,11 +42,11 @@ export const arritmias: Anomaly[] = [
     category: 'arritmias',
     color: '#8b5cf6',
     timeSensitive: true,
-    description: 'Macrorreentrada atrial. Ondas F em dente de serra nas derivacoes inferiores a 300 bpm. Tipicamente 2:1 (FC 150 bpm).',
+    description: 'Macrorreentrada atrial. Ondas F em dente de serra nas derivações inferiores a 300 bpm. Tipicamente 2:1 (FC 150 bpm).',
     criteria: [
       { text: 'Ondas F em dente de serra a 250-350 bpm em DII, DIII, aVF', important: true },
       { text: 'Linha isoeletrica ausente entre as ondas F' },
-      { text: 'Conducao AV tipicamente 2:1 -- FC ventricular ~150 bpm', important: true },
+      { text: 'Condução AV tipicamente 2:1 -- FC ventricular ~150 bpm', important: true },
       { text: 'QRS estreito (exceto aberrancia ou WPW)' },
     ],
     exceptions: [
@@ -54,8 +54,8 @@ export const arritmias: Anomaly[] = [
       { text: 'Adenosina pode desmascarar ondas F ao aumentar bloqueo AV momentaneamente' },
     ],
     conductaTimeSensitive: [
-      'Instavel: cardioversao eletrica sincronizada (baixa energia: 50-100J)',
-      'Estavel: controle de FC ou ablacao por radiofrequencia',
+      'Instavel: cardioversão elétrica sincronizada (baixa energia: 50-100J)',
+      'Estavel: controle de FC ou ablação por radiofrequencia',
       'Anticoagulacao similar a FA',
     ],
     waveform: {
@@ -83,11 +83,11 @@ export const arritmias: Anomaly[] = [
       { text: 'Inicio e termino abruptos (paroxistica)' },
     ],
     exceptions: [
-      { text: 'TSV com aberrancia pode simular TV -- avaliar historia e criterios de Brugada' },
-      { text: 'TRVA (WPW) pode ser TSV de QRS estreito quando conducao e pelo no AV' },
+      { text: 'TSV com aberrancia pode simular TV -- avaliar historia e critérios de Brugada' },
+      { text: 'TRVA (WPW) pode ser TSV de QRS estreito quando condução é pelo nó AV' },
     ],
     conductaTimeSensitive: [
-      'Instavel: cardioversao eletrica sincronizada',
+      'Instavel: cardioversão elétrica sincronizada',
       'Estavel: manobra vagal (Valsalva modificada) -- primeira linha',
       'Adenosina 6mg IV rapido (segunda linha)',
       'Verapamil ou diltiazem se adenosina falhar',
@@ -111,7 +111,7 @@ export const arritmias: Anomaly[] = [
     description: 'Taquicardia de QRS largo (>= 3 batimentos). Origem ventricular. Potencialmente fatal.',
     criteria: [
       { text: 'QRS >= 120ms com taquicardia regular ou quase regular', important: true },
-      { text: 'Dissociacao AV (P independente dos QRS) -- criterio mais especifico', important: true },
+      { text: 'Dissociação AV (P independente dos QRS) -- criterio mais especifico', important: true },
       { text: 'Batimentos de fusao ou captura', important: true },
       { text: 'Eixo extremamente desviado (-90° a +180°, "no man\'s land")' },
       { text: 'Concordancia positiva ou negativa em V1-V6' },
@@ -119,38 +119,38 @@ export const arritmias: Anomaly[] = [
     ],
     exceptions: [
       { text: 'TSV com aberrancia pode simular TV -- TRATAR COMO TV se duvida em emergencia', important: true },
-      { text: 'Criterios de Brugada: negativos em cada etapa = TSV; positivos = TV' },
+      { text: 'Critérios de Brugada: negativos em cada etapa = TSV; positivos = TV' },
       { text: 'Criterio de Vereckei: negativo em aVR = TV; qualquer resposta positiva = TV' },
     ],
     conductaTimeSensitive: [
-      'Instavel (sem pulso, hipotensao grave): desfibrilacao imediata',
-      'Instavel (com pulso): cardioversao eletrica sincronizada',
-      'Estavel: amiodarona 150mg IV; cardioversao eletrica se falhar',
-      'TV sustentada com pulso: nao atrasar cardioversao',
+      'Instavel (sem pulso, hipotensao grave): desfibrilação imediata',
+      'Instavel (com pulso): cardioversão elétrica sincronizada',
+      'Estavel: amiodarona 150mg IV; cardioversão elétrica se falhar',
+      'TV sustentada com pulso: não atrasar cardioversao',
     ],
     waveform: {
       primaryLeads: ['DII', 'V1', 'V6'],
       mainChange: 'qrs-largo',
       findings: [
         { lead: 'DII', change: 'qrs-largo', label: 'QRS largo regular' },
-        { lead: 'DII', change: 'dissociacao-av', label: 'Dissociacao AV' },
+        { lead: 'DII', change: 'dissociacao-av', label: 'Dissociação AV' },
         { lead: 'V1', change: 'qrs-largo', label: 'Morfologia ventricular' },
       ],
     },
   },
   {
     id: 'fv',
-    name: 'Fibrilacao Ventricular (FV)',
+    name: 'Fibrilação Ventricular (FV)',
     shortName: 'FV',
     category: 'arritmias',
     color: '#dc2626',
     timeSensitive: true,
-    description: 'Atividade eletrica ventricular caotica. Sem pulso efetivo. Parada cardiaca. Desfibrilacao imediata.',
+    description: 'Atividade elétrica ventricular caótica. Sem pulso efetivo. Parada cardíaca. Desfibrilacao imediata.',
     criteria: [
       { text: 'Oscilacoes irregulares de amplitude e morfologia variaveis', important: true },
       { text: 'Sem complexos QRS identificaveis', important: true },
-      { text: 'FV grossa (ampla): melhor prognostico, mais responsiva a desfibrilacao' },
-      { text: 'FV fina: pior prognostico -- pode ser confundida com assistolia' },
+      { text: 'FV grossa (ampla): melhor prognóstico, mais responsiva à desfibrilação' },
+      { text: 'FV fina: pior prognóstico -- pode ser confundida com assistolia' },
     ],
     exceptions: [
       { text: 'NUNCA palpar pulso ou aguardar mais de 2s apos identificar FV -- desfibrilar imediatamente', important: true },
@@ -240,12 +240,12 @@ export const arritmias: Anomaly[] = [
     category: 'arritmias',
     color: '#8b5cf6',
     timeSensitive: false,
-    description: 'Batimento ectopico ventricular prematuro. QRS largo sem P precedente. Pausa compensatoria completa.',
+    description: 'Batimento ectópico ventricular prematuro. QRS largo sem P precedente. Pausa compensatória completa.',
     criteria: [
       { text: 'QRS prematuro com morfologia diferente, largura >= 120ms', important: true },
       { text: 'Ausencia de onda P precedente' },
       { text: 'T discordante do QRS' },
-      { text: 'Pausa compensatoria completa (RR da EV + RR seguinte = 2x RR sinusal)' },
+      { text: 'Pausa compensatória completa (RR da EV + RR seguinte = 2x RR sinusal)' },
     ],
     exceptions: [
       { text: 'EV frequentes (> 10.000/dia) podem causar miocardiopatia induzida por EV' },

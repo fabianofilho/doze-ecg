@@ -10,7 +10,7 @@ export default function CriteriaCard({ anomaly }: Props) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
       {/* Criterios diagnosticos */}
-      <Section title="Criterios Diagnosticos" color={color} icon="check">
+      <Section title="Critérios Diagnósticos" color={color} icon="check">
         {criteria.map((c, i) => (
           <CriterionItem key={i} text={c.text} value={c.value} important={c.important} color={color} />
         ))}
@@ -18,7 +18,7 @@ export default function CriteriaCard({ anomaly }: Props) {
 
       {/* Excecoes / Armadilhas */}
       {exceptions && exceptions.length > 0 && (
-        <Section title="Armadilhas e Excecoes" color="#f59e0b" icon="warning">
+        <Section title="Armadilhas e Exceções" color="#f59e0b" icon="warning">
           {exceptions.map((e, i) => (
             <CriterionItem key={i} text={e.text} value={e.value} important={e.important} color="#f59e0b" />
           ))}
@@ -27,7 +27,7 @@ export default function CriteriaCard({ anomaly }: Props) {
 
       {/* Conduta tempo-sensivel */}
       {conductaTimeSensitive && conductaTimeSensitive.length > 0 && (
-        <Section title="Conduta Tempo-Sensivel" color="#ef4444" icon="clock">
+        <Section title="Conduta Tempo-Sensível" color="#ef4444" icon="clock">
           {conductaTimeSensitive.map((c, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, padding: '4px 0' }}>
               <span style={{

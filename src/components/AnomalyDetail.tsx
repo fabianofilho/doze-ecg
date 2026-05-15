@@ -55,7 +55,7 @@ export default function AnomalyDetail({ anomaly }: Props) {
                   background: '#ef4444',
                   animation: 'pulse 1.5s infinite',
                 }} />
-                Tempo-sensivel
+                Tempo-sensível
               </span>
             )}
           </div>
@@ -76,7 +76,7 @@ export default function AnomalyDetail({ anomaly }: Props) {
           <ECGStrip anomaly={anomaly} />
         </div>
 
-        {/* Coracao (apenas isquemias) */}
+        {/* Coração (apenas isquemias) */}
         {isIschemia && anomaly.heartWall && (
           <div>
             <HeartAnatomy wall={anomaly.heartWall} artery={anomaly.artery} color={anomaly.color} />

@@ -12,20 +12,20 @@ export const sindromes: Anomaly[] = [
     criteria: [
       { text: 'PR curto < 120ms', important: true },
       { text: 'Onda delta: empastamento inicial do QRS', important: true },
-      { text: 'QRS alargado por pre-excitacao (pseudo-bloqueio de ramo)' },
+      { text: 'QRS alargado por pré-excitação (pseudo-bloqueio de ramo)' },
       { text: 'T discordante da onda delta' },
-      { text: 'Pode ter pseudo-Q em derivacoes com delta negativa (simular IAM)', important: true },
+      { text: 'Pode ter pseudo-Q em derivações com delta negativa (simular IAM)', important: true },
     ],
     exceptions: [
       { text: 'FA + WPW: via acessoria pode conduzir a 300 bpm -- risco de FV. NAO usar adenosina, verapamil ou diltiazem', important: true },
-      { text: 'FA com QRS largo e irregular + WPW = emergencia -- cardioversao eletrica' },
+      { text: 'FA com QRS largo e irregular + WPW = emergencia -- cardioversão elétrica' },
       { text: 'WPW em ritmo sinusal nao requer tratamento se assintomatico em geral' },
     ],
     conductaTimeSensitive: [
-      'FA + WPW instavel: cardioversao eletrica imediata',
+      'FA + WPW instavel: cardioversão elétrica imediata',
       'FA + WPW estavel: procainamida ou ibutilida IV',
       'CONTRAINDICADO em FA+WPW: adenosina, betabloqueadores, verapamil, diltiazem, digoxina',
-      'TSV regular + WPW: adenosina aceitavel (conducao pelo no AV)',
+      'TSV regular + WPW: adenosina aceitavel (condução pelo nó AV)',
     ],
     waveform: {
       primaryLeads: ['DII', 'V1'],
@@ -39,7 +39,7 @@ export const sindromes: Anomaly[] = [
   },
   {
     id: 'brugada',
-    name: 'Sindrome de Brugada',
+    name: 'Síndrome de Brugada',
     shortName: 'Brugada',
     category: 'sindromes',
     color: '#10b981',
@@ -59,7 +59,7 @@ export const sindromes: Anomaly[] = [
     conductaTimeSensitive: [
       'Brugada tipo 1 espontaneo + sincope ou FV previa: CDI (cardioversor-desfibrilador implantavel)',
       'Febre: controlar agressivamente (AAS/dipirona)',
-      'FV aguda: desfibrilacao + quinidina ou isoproterenol como ponte',
+      'FV aguda: desfibrilação + quinidina ou isoproterenol como ponte',
       'Evitar farmacos bloqueadores de canal de Na+, vagotonia, hipertermia',
     ],
     waveform: {
@@ -73,7 +73,7 @@ export const sindromes: Anomaly[] = [
   },
   {
     id: 'qt-longo',
-    name: 'Sindrome do QT Longo',
+    name: 'Síndrome do QT Longo',
     shortName: 'QT Longo',
     category: 'sindromes',
     color: '#10b981',
@@ -147,17 +147,17 @@ export const sindromes: Anomaly[] = [
     category: 'sindromes',
     color: '#10b981',
     timeSensitive: true,
-    description: 'Inflamacao do pericardio. Supra ST difuso CONCAVO (saddle-back) em quase todas derivacoes + depressao PR. Principal diagnostico diferencial de IAMCSST.',
+    description: 'Inflamação do pericárdio. Supra ST difuso CONCAVO (saddle-back) em quase todas derivações + depressao PR. Principal diagnóstico diferencial de IAMCSST.',
     criteria: [
       { text: 'Supra ST difuso (DI, DII, aVL, aVF, V2-V6) com morfologia CONCAVA (sela)', important: true },
-      { text: 'Depressao PR em DII e derivacoes precordiais (muito especifico)', important: true },
-      { text: 'Supra em aVR com depressao PR em aVR (inverso das outras derivacoes)' },
-      { text: 'Ausencia de reciproco (exceto aVR)' },
-      { text: 'Razao ST/T > 0,25 em V6 sugere pericardite (vs. repolarizacao precoce)' },
+      { text: 'Depressao PR em DII e derivações precordiais (muito específico)', important: true },
+      { text: 'Supra em aVR com depressao PR em aVR (inverso das outras derivações)' },
+      { text: 'Ausencia de recíproco (exceto aVR)' },
+      { text: 'Razao ST/T > 0,25 em V6 sugere pericardite (vs. repolarização precoce)' },
     ],
     exceptions: [
-      { text: 'IAMCSST tem supra CONVEXO (abobada), reciprocos evidentes e nao tem depressao PR', important: true },
-      { text: 'Pericardite com derrame: pode ter baixa voltagem e alternancia eletrica' },
+      { text: 'IAMCSST tem supra CONVEXO (abóbada), recíprocos evidentes e não tem depressão PR', important: true },
+      { text: 'Pericardite com derrame: pode ter baixa voltagem e alternância elétrica' },
       { text: 'Fase tardia da pericardite: T inverte apos o supra normalizar' },
     ],
     conductaTimeSensitive: [
@@ -183,16 +183,16 @@ export const sindromes: Anomaly[] = [
     category: 'sindromes',
     color: '#10b981',
     timeSensitive: true,
-    description: 'Derrame pericardico comprimindo o coracao. Tríade de Beck: hipotensao + estase jugular + bulhas abafadas. ECG: baixa voltagem + alternancia eletrica.',
+    description: 'Derrame pericardico comprimindo o coração. Tríade de Beck: hipotensao + estase jugular + bulhas abafadas. ECG: baixa voltagem + alternância elétrica.',
     criteria: [
       { text: 'Baixa voltagem: QRS < 5mm em todos os membros e < 10mm em precordiais', important: true },
-      { text: 'Alternancia eletrica: variacao ciclica da amplitude/eixo do QRS', important: true },
+      { text: 'Alternância elétrica: variação cíclica da amplitude/eixo do QRS', important: true },
       { text: 'Taquicardia sinusal compensatória' },
       { text: 'Triagem: ecocardiograma de urgencia (colapso de VD e VE na diastole)' },
     ],
     exceptions: [
-      { text: 'Alternancia eletrica + taquicardia = tamponamento ate prova em contrario', important: true },
-      { text: 'Baixa voltagem isolada pode ser DPOC, obesidade, efusao pleural -- alternancia eletrica e mais especifica' },
+      { text: 'Alternância elétrica + taquicardia = tamponamento até prova em contrário', important: true },
+      { text: 'Baixa voltagem isolada pode ser DPOC, obesidade, efusao pleural -- alternância elétrica é mais específica' },
     ],
     conductaTimeSensitive: [
       'Pericardiocentese de emergencia se instabilidade hemodinamica',
@@ -205,7 +205,7 @@ export const sindromes: Anomaly[] = [
       mainChange: 'baixa-voltagem',
       findings: [
         { lead: 'DII', change: 'baixa-voltagem', label: 'Baixa voltagem' },
-        { lead: 'V5', change: 'alternancia-eletrica', label: 'Alternancia eletrica' },
+        { lead: 'V5', change: 'alternancia-eletrica', label: 'Alternância elétrica' },
       ],
     },
   },

@@ -6,7 +6,7 @@ interface Props {
   color: string
 }
 
-// Mapeamento parede -> derivacoes
+// Mapeamento parede -> derivações
 const WALL_LEADS: Record<string, string[]> = {
   'anterior': ['V3', 'V4'],
   'septal': ['V1', 'V2'],
@@ -37,7 +37,7 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
   const leads = WALL_LEADS[wall] ?? []
   const label = WALL_LABELS[wall] ?? wall
 
-  // Paredes ativas por regiao no SVG do coracao
+  // Paredes ativas por regiao no SVG do coração
   const showAnterior = wall === 'anterior' || wall === 'anterior-extensa' || wall === 'septal'
   const showSeptal = wall === 'septal' || wall === 'anterior-extensa'
   const showLateral = wall === 'lateral' || wall === 'lateral-alta' || wall === 'anterior-extensa'
@@ -54,18 +54,18 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
   return (
     <div style={{ background: '#ffffff', borderRadius: 12, padding: 16, border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
       <p style={{ color: '#94a3b8', fontSize: 11, marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 }}>
-        Anatomia do Coracao
+        Anatomia do Coração
       </p>
 
       <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start', flexWrap: 'wrap' }}>
-        {/* SVG do coracao -- vista anterior esquematica */}
+        {/* SVG do coração -- vista anterior esquematica */}
         <svg
           viewBox="0 0 200 220"
           style={{ width: 180, minWidth: 140, height: 'auto' }}
           role="img"
-          aria-label={`Coracao com parede ${label} destacada`}
+          aria-label={`Coração com parede ${label} destacada`}
         >
-          {/* Contorno externo do coracao */}
+          {/* Contorno externo do coração */}
           <path
             d="M 100 200 C 40 160 10 130 10 90 C 10 55 35 35 65 35 C 80 35 92 42 100 52 C 108 42 120 35 135 35 C 165 35 190 55 190 90 C 190 130 160 160 100 200 Z"
             fill={showGlobal ? `${activeColor}44` : '#f0f4f8'}
@@ -73,7 +73,7 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
             strokeWidth="2"
           />
 
-          {/* VD -- lado direito do coracao (anatomico: esquerda no desenho) */}
+          {/* VD -- lado direito do coração (anatomico: esquerda no desenho) */}
           <path
             d="M 100 200 C 70 175 40 150 25 120 C 15 100 15 80 25 65 C 35 52 55 45 70 50 C 80 52 90 60 95 75 C 90 100 88 130 95 165 Z"
             fill={showVD ? `${activeColor}88` : showGlobal ? `${activeColor}33` : inactiveColor}
@@ -137,7 +137,7 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
             strokeWidth={showPosterior ? 1.5 : 0.8}
           />
 
-          {/* Arteria coronaria direita (CD) */}
+          {/* Artéria coronária direita (CD) */}
           <path
             d="M 65 42 C 35 48 18 65 18 90"
             fill="none"
@@ -146,7 +146,7 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
             strokeDasharray={showInferior || showVD ? undefined : '3,3'}
           />
 
-          {/* Arteria descendente anterior (DA) */}
+          {/* Artéria descendente anterior (DA) */}
           <path
             d="M 95 52 L 92 78 L 88 108 L 86 138 L 90 160"
             fill="none"
@@ -155,7 +155,7 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
             strokeDasharray={showAnterior || showSeptal ? undefined : '3,3'}
           />
 
-          {/* Arteria circunflexa (Cx) */}
+          {/* Artéria circunflexa (Cx) */}
           <path
             d="M 105 52 C 118 48 132 50 140 60 C 148 70 148 88 140 100"
             fill="none"
@@ -211,19 +211,19 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
               padding: '8px 12px',
               marginBottom: 8,
             }}>
-              <p style={{ color: '#64748b', fontSize: 10, margin: '0 0 2px' }}>Arteria culpada</p>
+              <p style={{ color: '#64748b', fontSize: 10, margin: '0 0 2px' }}>Artéria culpada</p>
               <p style={{ color: '#0f172a', fontSize: 12, fontWeight: 600, margin: 0 }}>{artery}</p>
             </div>
           )}
 
-          {/* Derivacoes correspondentes */}
+          {/* Derivações correspondentes */}
           <div style={{
             background: '#f8fafc',
             border: '1px solid #e2e8f0',
             borderRadius: 8,
             padding: '8px 12px',
           }}>
-            <p style={{ color: '#64748b', fontSize: 10, margin: '0 0 6px' }}>Derivacoes do ECG</p>
+            <p style={{ color: '#64748b', fontSize: 10, margin: '0 0 6px' }}>Derivações do ECG</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
               {leads.map(l => (
                 <span
@@ -245,9 +245,9 @@ export default function HeartAnatomy({ wall, artery, color }: Props) {
             </div>
           </div>
 
-          {/* Legenda das arterias */}
+          {/* Legenda das artérias */}
           <div style={{ marginTop: 10 }}>
-            <p style={{ color: '#94a3b8', fontSize: 9, marginBottom: 4 }}>Legenda arterias:</p>
+            <p style={{ color: '#94a3b8', fontSize: 9, marginBottom: 4 }}>Legenda artérias:</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <LegendItem color="#ef4444" label="DA (LAD)" />
               <LegendItem color="#f97316" label="CD (RCA)" />

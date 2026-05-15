@@ -8,7 +8,7 @@ export const bloqueios: Anomaly[] = [
     category: 'bloqueios',
     color: '#3b82f6',
     timeSensitive: false,
-    description: 'Conducao lenta pelo ramo direito. Morfologia RSR\' em V1, S largo em DI e V6.',
+    description: 'Condução lenta pelo ramo direito. Morfologia RSR\' em V1, S largo em DI e V6.',
     criteria: [
       { text: 'QRS >= 120ms (completo) ou 100-119ms (incompleto)', important: true },
       { text: 'RSR\' (orelhinha) em V1-V2 (rSR\')', important: true },
@@ -39,7 +39,7 @@ export const bloqueios: Anomaly[] = [
     category: 'bloqueios',
     color: '#3b82f6',
     timeSensitive: true,
-    description: 'Conducao lenta pelo ramo esquerdo. BRE novo deve ser tratado como IAMCSST ate prova em contrario.',
+    description: 'Condução lenta pelo ramo esquerdo. BRE novo deve ser tratado como IAMCSST ate prova em contrario.',
     criteria: [
       { text: 'QRS >= 120ms', important: true },
       { text: 'Onda R larga entalhada em DI, aVL, V5-V6 (RR\')', important: true },
@@ -50,7 +50,7 @@ export const bloqueios: Anomaly[] = [
     ],
     exceptions: [
       { text: 'BRE novo (ou presumivelmente novo) em dor toracica = IAMCSST equivalente', important: true },
-      { text: 'Criterios de Sgarbossa para detectar IAM sobre BRE:', important: true },
+      { text: 'Critérios de Sgarbossa para detectar IAM sobre BRE:', important: true },
       { text: '  - Concordancia: supra ST >= 1mm na mesma direcao do QRS (escore 5)' },
       { text: '  - Supra >= 1mm em V1-V3 onde QRS e negativo (escore 3)' },
       { text: '  - Infra >= 1mm em V1-V3 com QRS negativo (escore 2 -- Sgarbossa modificado: razao > 0,25)' },
@@ -58,7 +58,7 @@ export const bloqueios: Anomaly[] = [
     ],
     conductaTimeSensitive: [
       'BRE novo em contexto agudo: cateterismo de emergencia',
-      'Aplicar criterios de Sgarbossa/Smith-Sgarbossa',
+      'Aplicar critérios de Sgarbossa/Smith-Sgarbossa',
     ],
     waveform: {
       primaryLeads: ['V5', 'V6', 'DI'],
@@ -138,8 +138,8 @@ export const bloqueios: Anomaly[] = [
     timeSensitive: true,
     description: 'BRD + HBAE. Comprometimento de 2 fasciculos. Risco de evolucao para BAV total em contexto agudo.',
     criteria: [
-      { text: 'Criterios de BRD: QRS >= 120ms, RSR\' em V1, S largo em V6', important: true },
-      { text: 'Criterios de HBAE: eixo -45° a -90°, rS em DII/DIII/aVF', important: true },
+      { text: 'Critérios de BRD: QRS >= 120ms, RSR\' em V1, S largo em V6', important: true },
+      { text: 'Critérios de HBAE: eixo -45° a -90°, rS em DII/DIII/aVF', important: true },
     ],
     exceptions: [
       { text: 'Bifascicular novo + PR longo = trifascicular (risco alto de BAV total)', important: true },
@@ -167,7 +167,7 @@ export const bloqueios: Anomaly[] = [
     category: 'bloqueios',
     color: '#3b82f6',
     timeSensitive: false,
-    description: 'Conducao AV lenta mas preservada. PR > 200ms com P conduzida para cada QRS.',
+    description: 'Condução AV lenta mas preservada. PR > 200ms com P conduzida para cada QRS.',
     criteria: [
       { text: 'Intervalo PR > 200ms (> 5 pequenos quadrados)', important: true },
       { text: 'Todas as ondas P conduzem (1 P para cada QRS)' },
@@ -200,7 +200,7 @@ export const bloqueios: Anomaly[] = [
       { text: 'Apos a pausa: PR se reinicia curto' },
     ],
     exceptions: [
-      { text: 'Geralmente nodal (no AV) -- melhor prognostico que Mobitz II' },
+      { text: 'Geralmente nodal (no AV) -- melhor prognóstico que Mobitz II' },
       { text: 'Pode ser fisiologico em atletas durante sono' },
     ],
     waveform: {
@@ -248,9 +248,9 @@ export const bloqueios: Anomaly[] = [
     category: 'bloqueios',
     color: '#dc2626',
     timeSensitive: true,
-    description: 'Dissociacao AV completa. Nenhuma P conduzida. Ritmo de escape ventricular ou juncional. Alta mortalidade se nao tratado.',
+    description: 'Dissociação AV completa. Nenhuma P conduzida. Ritmo de escape ventricular ou juncional. Alta mortalidade se não tratado.',
     criteria: [
-      { text: 'Dissociacao AV completa: PP e RR regulares mas independentes', important: true },
+      { text: 'Dissociação AV completa: PP e RR regulares mas independentes', important: true },
       { text: 'FC atrial > FC ventricular' },
       { text: 'QRS largo se escape ventricular (< 40 bpm)' },
       { text: 'QRS estreito se escape juncional (40-60 bpm -- localizado acima do feixe de His)' },
@@ -269,7 +269,7 @@ export const bloqueios: Anomaly[] = [
       primaryLeads: ['DII'],
       mainChange: 'dissociacao-av',
       findings: [
-        { lead: 'DII', change: 'dissociacao-av', label: 'Dissociacao AV completa' },
+        { lead: 'DII', change: 'dissociacao-av', label: 'Dissociação AV completa' },
       ],
     },
   },

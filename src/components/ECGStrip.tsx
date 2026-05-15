@@ -411,7 +411,7 @@ function buildDeWinterPath(): string {
 }
 
 function buildFVPath(): string {
-  // Fibrilacao ventricular: oscilacoes caoticas sem QRS identificavel
+  // Fibrilação ventricular: oscilações caóticas sem QRS identificável
   const bl = 70
   const pts: [number, number][] = [
     [10, bl], [18, bl - 18], [25, bl + 22], [32, bl - 10], [39, bl + 15],
@@ -646,7 +646,7 @@ export default function ECGStrip({ anomaly }: Props) {
   return (
     <div style={{ background: '#ffffff', borderRadius: 12, padding: 16, border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
       <p style={{ color: '#94a3b8', fontSize: 11, marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 }}>
-        Traco Esquematico
+        Traço Esquemático
       </p>
 
       {/* Grade ECG */}
@@ -655,7 +655,7 @@ export default function ECGStrip({ anomaly }: Props) {
           viewBox="0 0 420 140"
           style={{ width: '100%', minWidth: 320, height: 140, display: 'block' }}
           role="img"
-          aria-label={`Traco ECG esquematico para ${anomaly.name}`}
+          aria-label={`Traço ECG esquemático para ${anomaly.name}`}
         >
           {/* Grade de fundo */}
           <defs>
@@ -673,7 +673,7 @@ export default function ECGStrip({ anomaly }: Props) {
           {/* Linha de base */}
           <line x1="0" y1="70" x2="420" y2="70" stroke="#fca5a5" strokeWidth="0.8" strokeDasharray="4,4"/>
 
-          {/* Traco ECG principal */}
+          {/* Traço ECG principal */}
           <path
             d={path}
             fill="none"
@@ -709,7 +709,7 @@ export default function ECGStrip({ anomaly }: Props) {
         </svg>
       </div>
 
-      {/* Derivacoes afetadas */}
+      {/* Derivações afetadas */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 8 }}>
         {LEAD_LABELS.map(lead => {
           const isPrimary = primaryLeads.includes(lead as any)
@@ -735,7 +735,7 @@ export default function ECGStrip({ anomaly }: Props) {
       </div>
       {reciprocalLeads.length > 0 && (
         <p style={{ color: '#d97706', fontSize: 10, marginTop: 4 }}>
-          Em amarelo: derivacoes com alteracao reciproca
+          Em amarelo: derivações com alteração recíproca
         </p>
       )}
     </div>

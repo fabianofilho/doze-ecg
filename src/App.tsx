@@ -37,39 +37,34 @@ export default function App() {
     <div style={{ minHeight: '100vh', background: '#f1f5f9' }}>
       {/* Header */}
       <header style={{
-        borderBottom: '1px solid #e2e8f0',
         padding: '0 24px',
-        background: '#ffffff',
+        background: 'linear-gradient(135deg, #003D6B 0%, #006DB3 100%)',
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+        boxShadow: '0 2px 8px rgba(0,61,107,0.35)',
       }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: 12,
-            padding: '14px 0 12px',
-            borderBottom: '1px solid #f1f5f9',
+            gap: 16,
+            padding: '12px 0 10px',
+            borderBottom: '1px solid rgba(255,255,255,0.12)',
           }}>
-            {/* Logo ECG */}
-            <svg width="32" height="20" viewBox="0 0 120 40" fill="none">
-              <polyline
-                points="0,20 15,20 22,5 30,35 38,10 46,30 54,20 75,20 82,5 90,30 98,15 106,25 120,20"
-                stroke="#ef4444"
-                strokeWidth="3"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            {/* Logo Doze por Oito */}
+            <img
+              src="https://www.dozeporoitocardiologia.com/assets/logo-doze-footer-new-BX-yFShu.svg"
+              alt="Doze por Oito Cardiologia"
+              style={{ height: 36, width: 'auto', flexShrink: 0 }}
+            />
+            <div style={{ width: 1, height: 32, background: 'rgba(255,255,255,0.2)', flexShrink: 0 }} />
             <div>
-              <h1 style={{ margin: 0, fontSize: 17, fontWeight: 700, color: '#0f172a', lineHeight: 1.2 }}>
+              <h1 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#ffffff', lineHeight: 1.2 }}>
                 ECG Interativo
               </h1>
-              <p style={{ margin: 0, fontSize: 11, color: '#94a3b8' }}>
-                Doze por Oito Cardiologia
+              <p style={{ margin: 0, fontSize: 11, color: '#93c5fd' }}>
+                Educação em Cardiologia
               </p>
             </div>
             <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -77,20 +72,21 @@ export default function App() {
                 padding: '2px 8px',
                 borderRadius: 10,
                 fontSize: 10,
-                background: '#fee2e2',
-                color: '#dc2626',
+                background: 'rgba(255,255,255,0.15)',
+                color: '#fca5a5',
                 fontWeight: 600,
+                border: '1px solid rgba(255,255,255,0.2)',
               }}>
-                {allAnomalies.filter(a => a.timeSensitive).length} tempo-sensiveis
+                {allAnomalies.filter(a => a.timeSensitive).length} tempo-sensíveis
               </span>
               <span style={{
                 padding: '2px 8px',
                 borderRadius: 10,
                 fontSize: 10,
-                background: '#f1f5f9',
-                color: '#64748b',
+                background: 'rgba(255,255,255,0.12)',
+                color: 'rgba(255,255,255,0.75)',
                 fontWeight: 600,
-                border: '1px solid #e2e8f0',
+                border: '1px solid rgba(255,255,255,0.2)',
               }}>
                 {allAnomalies.length} anomalias
               </span>
@@ -120,7 +116,7 @@ export default function App() {
             onSelect={setSelectedId}
           />
           <p style={{ color: '#94a3b8', fontSize: 11, marginBottom: 8, marginTop: 0 }}>
-            Pontos vermelhos = doencas tempo-sensiveis
+            Pontos vermelhos = doenças tempo-sensíveis
           </p>
         </div>
 

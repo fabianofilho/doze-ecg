@@ -8,7 +8,7 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao da arteria descendente anterior (DA/LAD). Supra em V3-V4, reciprocas inferiores.',
+    description: 'Oclusão da artéria descendente anterior (DA/LAD). Supra em V3-V4, reciprocas inferiores.',
     heartWall: 'anterior',
     artery: 'DA (LAD)',
     criteria: [
@@ -16,12 +16,12 @@ export const ischemias: Anomaly[] = [
       { text: 'Em homens < 40 anos: supra >= 2,5mm em V3-V4' },
       { text: 'Em homens >= 40 anos: supra >= 2mm em V3-V4' },
       { text: 'Em mulheres: supra >= 1,5mm em V3-V4' },
-      { text: 'Reciproco: infra ST em DII, DIII, aVF' },
-      { text: 'Onda Q patologica nas derivacoes comprometidas (fase tardia)' },
+      { text: 'Recíproco: infra ST em DII, DIII, aVF' },
+      { text: 'Onda Q patologica nas derivações comprometidas (fase tardia)' },
     ],
     exceptions: [
-      { text: 'BRE novo pode mascarar o supra -- usar criterios de Sgarbossa', important: true },
-      { text: 'Padrão de repolarizacao precoce pode simular supra (concavo, sem reciproco)' },
+      { text: 'BRE novo pode mascarar o supra -- usar critérios de Sgarbossa', important: true },
+      { text: 'Padrão de repolarizacao precoce pode simular supra (concavo, sem recíproco)' },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia (IAM supra)',
@@ -48,18 +48,18 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao proximal da DA comprometendo o septo. Supra em V1-V2.',
+    description: 'Oclusão proximal da DA comprometendo o septo. Supra em V1-V2.',
     heartWall: 'septal',
     artery: 'DA proximal (ramos septais)',
     criteria: [
       { text: 'Supradesnivelamento ST >= 1mm em V1-V2', important: true },
-      { text: 'Frequentemente associado a supra anterior (V1-V4) em oclusao proximal da DA' },
+      { text: 'Frequentemente associado a supra anterior (V1-V4) em oclusão proximal da DA' },
       { text: 'QS em V1-V2 na fase tardia (necrose septal)' },
       { text: 'Risco de BAV por comprometimento do no AV (ramos septais)' },
     ],
     exceptions: [
       { text: 'BRD pode elevar o ST em V1 -- avaliar contexto clinico', important: true },
-      { text: 'Brugada tipo 1 eleva ST em V1-V2 com morfologia coved -- sem reciprocos' },
+      { text: 'Brugada tipo 1 eleva ST em V1-V2 com morfologia coved -- sem recíprocos' },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia',
@@ -83,21 +83,21 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao da arteria circunflexa (Cx/LCx). Supra em V5-V6, DI, aVL.',
+    description: 'Oclusão da artéria circunflexa (Cx/LCx). Supra em V5-V6, DI, aVL.',
     heartWall: 'lateral',
     artery: 'Cx (LCx)',
     criteria: [
       { text: 'Supradesnivelamento ST em V5-V6 e/ou DI, aVL', important: true },
-      { text: 'Reciproco: infra ST em DII, DIII, aVF (quando lateral alta)' },
+      { text: 'Recíproco: infra ST em DII, DIII, aVF (quando lateral alta)' },
       { text: 'Frequentemente menor amplitude de supra que IAM anterior' },
     ],
     exceptions: [
       { text: 'Circunflexa dominante pode causar isquemia inferior concomitante' },
-      { text: 'IAM lateral isolado pode ser sutil -- verificar todas derivacoes' },
+      { text: 'IAM lateral isolado pode ser sutil -- verificar todas derivações' },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia',
-      'Solicitar derivacoes posteriores (V7-V9) para excluir componente posterior',
+      'Solicitar derivações posteriores (V7-V9) para excluir componente posterior',
     ],
     waveform: {
       primaryLeads: ['V5', 'V6', 'DI', 'aVL'],
@@ -121,16 +121,16 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao de diagonal da DA ou Cx proximal. Supra em DI e aVL com reciprocos inferiores marcados.',
+    description: 'Oclusao de diagonal da DA ou Cx proximal. Supra em DI e aVL com recíprocos inferiores marcados.',
     heartWall: 'lateral-alta',
     artery: 'Diagonal da DA ou Cx proximal',
     criteria: [
       { text: 'Supradesnivelamento ST em DI e aVL', important: true },
-      { text: 'Reciproco marcado: infra em DII, DIII, aVF (especialmente DIII)', important: true },
+      { text: 'Recíproco marcado: infra em DII, DIII, aVF (especialmente DIII)', important: true },
       { text: 'Pode ser isolado (sem supra em precordiais)' },
     ],
     exceptions: [
-      { text: 'Infra DII/DIII/aVF proeminente pode desviar atencao do supra DI/aVL -- revisar todas as derivacoes sistematicamente', important: true },
+      { text: 'Infra DII/DIII/aVF proeminente pode desviar atenção do supra DI/aVL -- revisar todas as derivações sistematicamente', important: true },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia',
@@ -144,7 +144,7 @@ export const ischemias: Anomaly[] = [
       findings: [
         { lead: 'DI', change: 'supra', label: 'Supra ST' },
         { lead: 'aVL', change: 'supra', label: 'Supra ST' },
-        { lead: 'DIII', change: 'infra', label: 'Reciproco forte' },
+        { lead: 'DIII', change: 'infra', label: 'Recíproco forte' },
         { lead: 'aVF', change: 'infra', label: 'Reciproco' },
       ],
     },
@@ -156,19 +156,19 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao da coronaria direita (CD/RCA). Supra em DII, DIII e aVF.',
+    description: 'Oclusão da coronária direita (CD/RCA). Supra em DII, DIII e aVF.',
     heartWall: 'inferior',
     artery: 'CD (RCA)',
     criteria: [
       { text: 'Supradesnivelamento ST >= 1mm em DII, DIII e aVF', important: true },
       { text: 'Supra em DIII maior que em DII sugere CD (vs. Cx)', important: true },
-      { text: 'Reciproco: infra em DI, aVL', important: true },
-      { text: 'Solicitar derivacoes direitas (V3R, V4R) para excluir VD' },
+      { text: 'Recíproco: infra em DI, aVL', important: true },
+      { text: 'Solicitar derivações direitas (V3R, V4R) para excluir VD' },
     ],
     exceptions: [
-      { text: 'Supra DII = DIII + supra aVL sugere Cx como arteria culpada (IAMCSST inferior-lateral)' },
+      { text: 'Supra DII = DIII + supra aVL sugere Cx como artéria culpada (IAMCSST inferior-lateral)' },
       { text: 'IAM inferior por CD proximal pode comprometer VD -- verificar V3R-V4R', important: true },
-      { text: 'Pericardite aguda pode simular supra inferior difuso (concavo, sem reciproco)' },
+      { text: 'Pericardite aguda pode simular supra inferior difuso (concavo, sem recíproco)' },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia',
@@ -197,18 +197,18 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Extensao do IAM inferior para o VD por oclusao proximal da CD. Diagnostico pelas derivacoes direitas.',
+    description: 'Extensao do IAM inferior para o VD por oclusão proximal da CD. Diagnostico pelas derivações direitas.',
     heartWall: 'vd',
     artery: 'CD proximal',
     criteria: [
-      { text: 'Supra >= 1mm em V4R (altamente sensivel e especifico)', important: true },
+      { text: 'Supra >= 1mm em V4R (altamente sensível e especifico)', important: true },
       { text: 'Supra em V3R acompanhando V4R' },
       { text: 'Sempre associado a IAMCSST inferior (DII, DIII, aVF)' },
       { text: 'Hipotensao + BAVT + veias jugulares distendidas na ausencia de congestao pulmonar' },
     ],
     exceptions: [
       { text: 'Supra em V1 no contexto de IAMCSST inferior sugere acometimento de VD' },
-      { text: 'Derivacoes direitas devem ser obtidas rapidamente pois a elevacao de ST em V4R pode desaparecer em horas', important: true },
+      { text: 'Derivações direitas devem ser obtidas rapidamente pois a elevacao de ST em V4R pode desaparecer em horas', important: true },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia',
@@ -235,7 +235,7 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao da CD ou Cx atingindo a parede posterior. Diagnostico por derivacoes posteriores ou pelo espelho das precordiais.',
+    description: 'Oclusao da CD ou Cx atingindo a parede posterior. Diagnóstico por derivações posteriores ou pelo espelho das precordiais.',
     heartWall: 'posterior',
     artery: 'CD ou Cx (ramo marginal posterior)',
     criteria: [
@@ -245,7 +245,7 @@ export const ischemias: Anomaly[] = [
       { text: 'Confirmacao: supra >= 0,5mm em V7-V9', important: true },
     ],
     exceptions: [
-      { text: 'Infra V1-V3 isolado pode ser isquemia subendocardica anterior ou posterior -- derivacoes V7-V9 diferenciam', important: true },
+      { text: 'Infra V1-V3 isolado pode ser isquemia subendocárdica anterior ou posterior -- derivações V7-V9 diferenciam', important: true },
       { text: 'BRD pode simular R alto em V1' },
     ],
     conductaTimeSensitive: [
@@ -273,17 +273,17 @@ export const ischemias: Anomaly[] = [
     category: 'ischemias',
     color: '#ef4444',
     timeSensitive: true,
-    description: 'Oclusao muito proximal da DA comprometendo parede anterior, septal e lateral. Pior prognostico.',
+    description: 'Oclusão muito proximal da DA comprometendo parede anterior, septal e lateral. Pior prognóstico.',
     heartWall: 'anterior-extensa',
     artery: 'DA proximal ao 1o septo/diagonal',
     criteria: [
       { text: 'Supra em V1-V6 + DI e aVL', important: true },
-      { text: 'Pode haver reciproco em DIII, aVF' },
+      { text: 'Pode haver recíproco em DIII, aVF' },
       { text: 'Maior area de necrose -- maior risco de choque cardiogenico e arritmias' },
       { text: 'BAVT pode ocorrer por lesao do no AV (septal)' },
     ],
     exceptions: [
-      { text: 'Supra difuso com morfologia concava pode ser pericardite -- verificar PR baixo e reciproco aVR' },
+      { text: 'Supra difuso com morfologia concava pode ser pericardite -- verificar PR baixo e recíproco aVR' },
     ],
     conductaTimeSensitive: [
       'Cateterismo de emergencia imediato',
@@ -305,7 +305,7 @@ export const ischemias: Anomaly[] = [
   },
   {
     id: 'wellens',
-    name: 'Sindrome de Wellens',
+    name: 'Síndrome de Wellens',
     shortName: 'Wellens',
     category: 'ischemias',
     color: '#f97316',
@@ -385,7 +385,7 @@ export const ischemias: Anomaly[] = [
     heartWall: 'global',
     artery: 'Tronco CE ou multiarterial grave',
     criteria: [
-      { text: 'Infra ST difuso em >= 6 derivacoes (DI, DII, V4-V6)', important: true },
+      { text: 'Infra ST difuso em >= 6 derivações (DI, DII, V4-V6)', important: true },
       { text: 'Supra ST em aVR (>= 1mm) e/ou V1', important: true },
       { text: 'Supra aVR > supra V1 sugere lesao de tronco vs. DA proximal' },
       { text: 'Pode apresentar instabilidade hemodinamica grave' },
@@ -393,7 +393,7 @@ export const ischemias: Anomaly[] = [
     ],
     exceptions: [
       { text: 'Supra aVR isolado com infra generalizado pode ser espasmo difuso ou embolia coronariana', important: true },
-      { text: 'Taquicardia grave (FA rapida, TSV) pode gerar infra ST difuso por isquemia subendocardica -- tratar a arritmia primeiro' },
+      { text: 'Taquicardia grave (FA rapida, TSV) pode gerar infra ST difuso por isquemia subendocárdica -- tratar a arritmia primeiro' },
       { text: 'Pericardite: supra difuso CONCAVO com PR baixo -- diferente do infra difuso do tronco' },
     ],
     conductaTimeSensitive: [
@@ -410,7 +410,7 @@ export const ischemias: Anomaly[] = [
         { lead: 'aVR', change: 'supra', label: 'Supra aVR (achado chave)' },
         { lead: 'DI', change: 'infra', label: 'Infra difuso' },
         { lead: 'DII', change: 'infra', label: 'Infra difuso' },
-        { lead: 'V5', change: 'infra', label: 'Infra difuso >= 6 derivacoes' },
+        { lead: 'V5', change: 'infra', label: 'Infra difuso >= 6 derivações' },
         { lead: 'V6', change: 'infra', label: 'Infra difuso' },
       ],
     },
